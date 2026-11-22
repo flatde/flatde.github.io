@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlatDE Bot – Apartment alerts in Germany</title>
+<meta name="description" content="Telegram bot that sends new rental apartments in Berlin, Hamburg, München, Köln, Frankfurt, Stuttgart, Düsseldorf and Dresden within seconds. English, Deutsch, العربية.">
+<style>
+  :root { --bg:#f7f8fa; --card:#fff; --text:#1b1f24; --muted:#5b6470; --accent:#229ED9; --border:#e3e6ea; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111418; --card:#1a1f25; --text:#e8eaed; --muted:#a0a8b3; --border:#2a313a; } }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Arabic",sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+  .wrap { max-width:760px; margin:0 auto; padding:24px 16px 48px; }
+  nav { display:flex; gap:8px; justify-content:flex-end; margin-bottom:16px; }
+  nav button { border:1px solid var(--border); background:var(--card); color:var(--text); padding:6px 12px; border-radius:8px; cursor:pointer; font-size:14px; }
+  nav button.on { border-color:var(--accent); color:var(--accent); font-weight:600; }
+  h1 { font-size:28px; line-height:1.25; margin:0 0 8px; }
+  h2 { font-size:20px; margin:32px 0 8px; }
+  h3 { font-size:16px; margin:20px 0 4px; }
+  p, li { color:var(--text); }
+  .muted { color:var(--muted); }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; margin:16px 0; }
+  .cta { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; padding:12px 22px; border-radius:10px; font-weight:600; margin:12px 0; }
+  ul { padding-inline-start:20px; }
+  .lang { display:none; }
+  .lang.on { display:block; }
+  [dir="rtl"] { text-align:right; }
+  footer { margin-top:40px; font-size:14px; }
+  footer a { color:var(--muted); margin-inline-end:16px; }
+  .legal { font-size:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <button data-l="en">English</button>
+    <button data-l="de">Deutsch</button>
+    <button data-l="ar">العربية</button>
+  </nav>
+
+  <!-- ================= ENGLISH ================= -->
+  <section class="lang" data-lang="en">
+    <h1>New rental apartments in Germany — on Telegram within seconds</h1>
+    <p class="muted">Good flats are gone within an hour. @FlatDE_bot watches the big portals and housing companies for you and messages you when something matches.</p>
+    <a class="cta" href="https://t.me/FlatDE_bot?start=web">Open @FlatDE_bot in Telegram</a>
+    <div class="card">
+      <ul>
+        <li><b>Sources:</b> ImmoScout24, Kleinanzeigen, WG-Gesucht, Immowelt and more, public housing companies (in Berlin e.g. degewo, Gewobag, Howoge) and furnished providers.</li>
+        <li><b>Filters:</b> budget, size, rooms, districts, WBS, WG rooms, furnished, temporary.</li>
+        <li><b>Cities:</b> Berlin, Hamburg, München, Köln, Frankfurt am Main, Stuttgart, Düsseldorf, Dresden.</li>
+        <li><b>Languages:</b> English, Deutsch, العربية.</li>
+        <li><b>Price:</b> 7 days free, then €5.49 for 30 days. One-time payment via Stripe or PayPal — no subscription, no automatic renewal.</li>
+      </ul>
+    </div>
+    <h2>FAQ</h2>
+    <h3>Does the bot rent out apartments?</h3>
+    <p>No. It only sends you the link to the original listing. You contact the landlord yourself. The bot never asks for deposits — never pay a deposit before seeing a flat and signing a contract.</p>
+    <h3>Will I find every apartment?</h3>
+    <p>No tool can promise that. The bot checks many sources regularly, and alerts arrive within seconds.</p>
+    <h3>Support</h3>
+    <p>WhatsApp: <a href="https://wa.me/4915510875265">wa.me/4915510875265</a></p>
+  </section>
+
+  <!-- ================= DEUTSCH ================= -->
+  <section class="lang" data-lang="de" lang="de">
+    <h1>Neue Mietwohnungen in Deutschland — in Sekunden auf Telegram</h1>
+    <p class="muted">Gute Wohnungen sind nach einer Stunde weg. @FlatDE_bot beobachtet die großen Portale und Wohnungsbaugesellschaften für dich und meldet sich, wenn etwas passt.</p>
+    <a class="cta" href="https://t.me/FlatDE_bot?start=web">@FlatDE_bot in Telegram öffnen</a>
+    <div class="card">
+      <ul>
+        <li><b>Quellen:</b> ImmoScout24, Kleinanzeigen, WG-Gesucht, Immowelt u. a., städtische Wohnungsbaugesellschaften (in Berlin z. B. degewo, Gewobag, Howoge) und Anbieter möblierter Wohnungen.</li>
+        <li><b>Filter:</b> Budget, Größe, Zimmer, Bezirke, WBS, WG-Zimmer, möbliert, befristet.</li>
+        <li><b>Städte:</b> Berlin, Hamburg, München, Köln, Frankfurt am Main, Stuttgart, Düsseldorf, Dresden.</li>
+        <li><b>Sprachen:</b> Deutsch, English, العربية.</li>
+        <li><b>Preis:</b> 7 Tage kostenlos, danach 5,49 € für 30 Tage. Einmalzahlung per Stripe oder PayPal — kein Abo, keine automatische Verlängerung.</li>
+      </ul>
+    </div>
+    <h2>Häufige Fragen</h2>
+    <h3>Vermietet der Bot Wohnungen?</h3>
+    <p>Nein. Er schickt nur den Link zum Originalinserat. Den Kontakt zum Vermieter nimmst du selbst auf. Der Bot verlangt nie eine Kaution — zahle nie eine Kaution, bevor du die Wohnung gesehen und einen Vertrag unterschrieben hast.</p>
+    <h3>Finde ich damit jede Wohnung?</h3>
+    <p>Das kann kein Tool versprechen. Der Bot prüft viele Quellen regelmäßig; Meldungen kommen innerhalb von Sekunden.</p>
+    <h3>Support</h3>
+    <p>WhatsApp: <a href="https://wa.me/4915510875265">wa.me/4915510875265</a></p>
+  </section>
+
+  <!-- ================= ARABIC ================= -->
+  <section class="lang" data-lang="ar" lang="ar" dir="rtl">
+    <h1>الشقق الجديدة للإيجار في ألمانيا — تصلك على تيليجرام خلال ثوانٍ</h1>
+    <p class="muted">الشقق الجيدة تختفي خلال ساعة. بوت ‎@FlatDE_bot يتابع المواقع الكبيرة وشركات السكن بدلاً منك، ويرسل لك رسالة عندما يظهر شيء مناسب.</p>
+    <a class="cta" href="https://t.me/FlatDE_bot?start=web">افتح ‎@FlatDE_bot في تيليجرام</a>
+    <div class="card">
+      <ul>
+        <li><b>المصادر:</b> ImmoScout24 وKleinanzeigen وWG-Gesucht وImmowelt وغيرها، وشركات السكن الحكومية (في برلين مثل degewo وGewobag وHowoge) ومواقع الشقق المفروشة.</li>
+        <li><b>الفلاتر:</b> الميزانية، المساحة، عدد الغرف، المناطق، WBS، غرف WG، مفروش، إيجار مؤقت.</li>
+        <li><b>المدن:</b> برلين، هامبورغ، ميونخ، كولن، فرانكفورت، شتوتغارت، دوسلدورف، دريسدن.</li>
+        <li><b>اللغات:</b> العربية، Deutsch، English.</li>
+        <li><b>السعر:</b> 7 أيام مجاناً، بعدها 5.49 يورو لمدة 30 يوماً. دفعة واحدة عبر Stripe أو PayPal — بدون اشتراك وبدون تجديد تلقائي.</li>
+      </ul>
+    </div>
+    <h2>أسئلة شائعة</h2>
+    <h3>هل البوت يؤجّر شققاً؟</h3>
+    <p>لا. البوت يرسل لك رابط الإعلان الأصلي فقط، وأنت تتواصل مع المؤجر بنفسك. البوت لا يطلب أي تأمين أبداً — لا تدفع أي تأمين قبل رؤية الشقة وتوقيع العقد.</p>
+    <h3>هل سأجد كل الشقق؟</h3>
+    <p>لا توجد أداة تستطيع أن تعد بذلك. البوت يتابع مصادر كثيرة بشكل منتظم، والتنبيهات تصل خلال ثوانٍ.</p>
+    <h3>الدعم</h3>
+    <p>واتساب: <a href="https://wa.me/4915510875265">wa.me/4915510875265</a></p>
+  </section>
+
+  <!-- ================= IMPRESSUM (German, legally required) ================= -->
+  <div class="legal" lang="de" dir="ltr" style="text-align:left">
+    <h2 id="impressum">Impressum</h2>
+    <p>Angaben gemäß § 5 DDG</p>
+    <p>
+      Elmo Elbadry<br>
+      Soldiner Straße<br>
+      13359 Berlin<br>
+      Deutschland
+    </p>
+    <p>
+      E-Mail: <a href="mailto:flatde@proton.me">flatde@proton.me</a><br>
+      WhatsApp: <a href="https://wa.me/4915510875265">+49 155 10875265</a>
+    </p>
+    <!-- Nur einfügen, falls vorhanden: -->
+    <!-- <p>Umsatzsteuer-ID gemäß § 27a UStG: [USt-IdNr.]</p> -->
+    <p>Verbraucherstreitbeilegung: Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+    <!-- ================= DATENSCHUTZ (draft — check with a generator or lawyer) ================= -->
+    <h2 id="datenschutz">Datenschutzerklärung</h2>
+    <h3>1. Verantwortlicher</h3>
+    <p>Verantwortlich für die Datenverarbeitung ist die im Impressum genannte Person.</p>
+    <h3>2. Diese Webseite</h3>
+    <p>Diese Webseite wird bei GitHub Pages (GitHub Inc., USA) gehostet. Beim Aufruf verarbeitet der Hoster technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt, aufgerufene Seite) in Server-Logs. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (sicherer Betrieb der Webseite). Wir setzen keine Cookies und kein Tracking ein.</p>
+    <h3>3. Telegram-Bot @FlatDE_bot</h3>
+    <p>Wenn Sie den Bot nutzen, verarbeiten wir: Ihre Telegram-Nutzer-ID, Ihren Telegram-Namen/Benutzernamen (falls vorhanden), Ihre Spracheinstellung, Ihre Suchfilter (Stadt, Budget, Größe, Zimmer, Bezirke usw.), Benachrichtigungseinstellungen, Test- und Zugangszeiträume sowie gegebenenfalls, über welchen Link Sie den Bot geöffnet haben. Zweck: Bereitstellung der Wohnungsbenachrichtigungen und Verwaltung Ihres Zugangs. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertrag). Die Daten werden auf einem Server von Google Cloud in Frankfurt am Main (Deutschland) gespeichert. Für die Nachrichtenübermittlung gelten zusätzlich die Datenschutzbestimmungen von Telegram.</p>
+    <h3>4. Zahlungen</h3>
+    <p>Zahlungen werden über Stripe (Stripe Payments Europe Ltd., Irland) oder PayPal (PayPal (Europe) S.à r.l. et Cie, S.C.A., Luxemburg) abgewickelt. Wir erhalten von diesen Anbietern eine Zahlungsbestätigung (z. B. Betrag, Zeitpunkt, Zahlungs-ID), aber keine vollständigen Karten- oder Kontodaten. Rechtsgrundlage: Art. 6 Abs. 1 lit. b und c DSGVO (Vertrag, steuerliche Aufbewahrungspflichten).</p>
+    <h3>5. Support per WhatsApp</h3>
+    <p>Wenn Sie uns per WhatsApp kontaktieren, werden Ihre Nachricht und Ihre Telefonnummer von WhatsApp (Meta) verarbeitet und von uns zur Beantwortung genutzt. Rechtsgrundlage: Art. 6 Abs. 1 lit. b bzw. f DSGVO.</p>
+    <h3>6. Speicherdauer</h3>
+    <p>Wir speichern Ihre Daten, solange Sie den Bot nutzen. Mit dem Befehl /stop beenden Sie alle automatischen Nachrichten. Auf Wunsch löschen wir Ihre Daten; Zahlungsbelege bewahren wir aufgrund gesetzlicher Pflichten bis zu 10 Jahre auf.</p>
+    <h3>7. Ihre Rechte</h3>
+    <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO) sowie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde. Kontakt: siehe Impressum.</p>
+    <p class="muted">Stand: November 2026</p>
+  </div>
+
+  <footer>
+    <a href="#impressum">Impressum</a>
+    <a href="#datenschutz">Datenschutz</a>
+  </footer>
+</div>
+<script>
+  (function () {
+    var buttons = document.querySelectorAll('nav button');
+    function show(l) {
+      document.querySelectorAll('.lang').forEach(function (s) { s.classList.toggle('on', s.dataset.lang === l); });
+      buttons.forEach(function (b) { b.classList.toggle('on', b.dataset.l === l); });
+      document.documentElement.lang = l;
+    }
+    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.l); }); });
+    var nav = (navigator.language || 'en').slice(0, 2);
+    show(nav === 'de' || nav === 'ar' ? nav : 'en');
+  })();
+</script>
+</body>
+</html>
